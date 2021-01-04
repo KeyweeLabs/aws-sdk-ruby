@@ -3,7 +3,7 @@ module Aws
     module Protocols
       class RestJson < Rest
 
-        def body_for(_, _, rules, data)
+        def body_for(_a, _b, rules, data)
           Aws::Json::Builder.new(rules).serialize(data)
         end
 
